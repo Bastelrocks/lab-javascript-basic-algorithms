@@ -75,7 +75,7 @@ let phraseToCheck="A man, a plan, a canal, Panama"
 phraseToCheck=phraseToCheck.toLowerCase();
 let i=0
 let j=phraseToCheck.length-1
-for(i,j;i!==j;i,j){
+for(i,j;i<j;i,j){
     if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
         console.log(phraseToCheck,"is a palindrome")
         break
@@ -122,3 +122,5 @@ for(i,j;i!==j;i,j){
        
     }
 } 
+if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
+    console.log(phraseToCheck,"is a palindrome", j,i)}
