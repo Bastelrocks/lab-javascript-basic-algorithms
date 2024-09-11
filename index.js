@@ -32,7 +32,7 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
     navigatorReversed = navigatorReversed.concat(hacker2.charAt(i))
 }
 console.log(navigatorReversed)
-let i = 0;
+// let i = 0;
 // do{
 //     if(hacker1.charAt(i)<hacker2.charAt(i)){
 //         console.log("The driver's name goes first.")
@@ -68,3 +68,57 @@ for(let i=0;i<longText.length;i++){
 }
 console.log(numberWords)
 console.log(numberEts)
+
+//Bonus 2
+
+let phraseToCheck="A man, a plan, a canal, Panama"
+phraseToCheck=phraseToCheck.toLowerCase();
+let i=0
+let j=phraseToCheck.length-1
+for(i,j;i!==j;i,j){
+    if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
+        console.log(phraseToCheck,"is a palindrome")
+        break
+    }
+    else if (phraseToCheck.charAt(i)===" "){
+        i++
+        continue
+    }
+    else if (phraseToCheck.charAt(i)===","){
+        i++
+        continue
+    }
+    else if (phraseToCheck.charAt(j)===" "){
+        j--
+        continue
+    }
+    else if (phraseToCheck.charAt(j)===","){
+        j--
+        continue
+    }
+    else if(phraseToCheck.charAt(i)!==phraseToCheck.charAt(j)){
+        console.log(phraseToCheck,"is no palindrome.", phraseToCheck.charAt(i),"does not match", phraseToCheck.charAt(j))
+        break
+    }
+    else if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
+        console.log(phraseToCheck,"is a palindrome")
+        break
+    }
+    else{
+        if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
+            console.log(phraseToCheck,"is a palindrome")
+            break
+        }
+        else{
+            i++
+            j--
+            console.log("i=",i ,"and character at i=", phraseToCheck.charAt(i))
+            console.log("j=",j,"and character at j=",phraseToCheck.charAt(j))
+            if (i===j && phraseToCheck.charAt(i)===phraseToCheck.charAt(j)){
+                console.log(phraseToCheck,"is a palindrome")
+                break}
+
+        }
+       
+    }
+} 
